@@ -13,7 +13,7 @@ workflows:
         script: |
           mkdir -p gradle/wrapper
           curl --fail --location --retry 3 --silent --show-error \
-            https://services.gradle.org/distributions/gradle-8.13-wrapper.jar \
+            https://raw.githubusercontent.com/gradle/gradle/v8.13.0/gradle/wrapper/gradle-wrapper.jar \
             -o gradle/wrapper/gradle-wrapper.jar
           echo "81a82aaea5abcc8ff68b3dfcb58b3c3c429378efd98e7433460610fecd7ae45f  gradle/wrapper/gradle-wrapper.jar" | shasum -a 256 -c -
       - name: Android debug APK yarat
