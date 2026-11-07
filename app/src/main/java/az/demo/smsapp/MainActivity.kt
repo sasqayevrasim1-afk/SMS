@@ -81,7 +81,7 @@ class MainActivity : Activity() {
         }
         bar.addView(clear)
         container.addView(bar)
-        val scroll = ScrollView(this).apply { fillViewport = true }
+        val scroll = ScrollView(this).apply { isFillViewport = true }
         list = LinearLayout(this).apply { orientation = LinearLayout.VERTICAL }
         scroll.addView(list)
         container.addView(scroll, LinearLayout.LayoutParams(-1, 0, 1f))
